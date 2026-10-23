@@ -1,0 +1,1 @@
+Poné acá las fotos de las plantas (ej: chanar-flor.jpg) y anotalas en datos/galeria.js
