@@ -1,0 +1,94 @@
+SITIO "NATIVAS DE CÓRDOBA" — CÓMO PUBLICARLO Y EDITARLO
+=====================================================
+
+QUÉ HAY EN LA CARPETA
+- index.html ............ página principal con todas las plantas
+- chanar.html, tala.html, etc. ... una página por planta (a estas llevan los QR)
+- carteles.html ......... carteles con QR listos para imprimir (2 por hoja A4)
+- datos/galeria.js ...... ACÁ AGREGÁS TUS FOTOS Y LEYENDAS
+- datos/plantas.js ...... los textos de las fichas (por si querés corregir algo)
+- fotos/ ................ carpeta donde van tus fotos
+- recursos/ ............. diseño y funcionamiento (no hace falta tocarlo)
+
+
+1) PUBLICAR EL SITIO GRATIS (GitHub Pages — queda para siempre)
+---------------------------------------------------------------
+a. Creá una cuenta gratuita en https://github.com
+b. Botón "+" (arriba a la derecha) > "New repository".
+   Nombre: nativas-cordoba  · marcá "Public" · "Create repository".
+c. En el repositorio nuevo: "uploading an existing file".
+   Descomprimí el ZIP y arrastrá TODO el contenido de la carpeta
+   (los .html y las carpetas datos, fotos y recursos). "Commit changes".
+d. Andá a "Settings" > "Pages". En "Branch" elegí "main" y "/ (root)" > "Save".
+e. En 1 o 2 minutos tu sitio queda en:
+      https://TU-USUARIO.github.io/nativas-cordoba/
+
+Alternativa más rápida: https://app.netlify.com/drop  (arrastrás la carpeta
+y te da una dirección; creá una cuenta para que no se borre).
+
+
+2) IMPRIMIR LOS CARTELES
+------------------------
+Abrí  https://TU-USUARIO.github.io/nativas-cordoba/carteles.html
+y tocá "Imprimir carteles". Los QR se arman solos con la dirección de TU sitio.
+En las opciones de impresión activá "Gráficos de fondo" para que salga el color.
+Importante: imprimilos desde el sitio publicado, no desde el archivo en tu compu.
+Tip: plastificalos o usá folio para que aguanten la intemperie.
+
+
+3) AGREGAR FOTOS Y LEYENDAS
+---------------------------
+a. Subí tus fotos a la carpeta "fotos" (en GitHub: entrá a la carpeta fotos >
+   "Add file" > "Upload files"). Usá nombres sin espacios ni tildes,
+   por ejemplo:  chanar-flor.jpg   tala-fruto-2026.jpg
+   Conviene achicar las fotos (menos de 1 MB cada una) para que carguen rápido.
+b. Abrí datos/galeria.js y tocá el lápiz (Edit). Buscá la planta y completá:
+
+   "chanar": {  // Chañar
+     fotos: [
+       { archivo: "fotos/chanar-flor.jpg", epigrafe: "Chañar en flor, patio de la escuela" },
+       { archivo: "fotos/chanar-fruto.jpg", epigrafe: "Frutos maduros en diciembre" },
+     ],
+     leyenda: "Cuentan los abuelos que...\n\nSegundo párrafo de la leyenda."
+   },
+
+   - Cada texto va entre comillas "..." y cada foto termina con coma.
+   - \n\n separa párrafos en la leyenda.
+   - Si un texto lleva comillas adentro, usá « » en lugar de " ".
+c. "Commit changes". En un minuto el cambio aparece en el sitio.
+   Los QR NO cambian: los carteles impresos siguen sirviendo.
+
+Si una planta todavía no tiene fotos propias, su página muestra automáticamente
+una foto de referencia de iNaturalist, con el nombre del autor.
+
+Si después de editar una página queda en blanco, casi siempre falta una coma
+o una comilla en galeria.js: revisá la última parte que cambiaste.
+
+
+4) AGREGAR UNA PLANTA NUEVA
+---------------------------
+Es más fácil pedírselo a Claude: te devuelve los archivos actualizados.
+
+
+5) LOGO DE LA ONG
+-----------------
+- Guardá el logo como  logo.png  dentro de la carpeta  recursos/
+  (en GitHub: carpeta recursos > "Add file" > "Upload files").
+- Escribí el nombre de la ONG en  datos/config.js
+- El logo aparece en el centro de cada QR y arriba en todas las páginas.
+  Si no hay logo, todo funciona igual, sin él.
+
+
+6) SEGURIDAD: CÓMO EVITAR QR FALSOS
+-----------------------------------
+El logo ayuda a reconocer el cartel, pero no alcanza solo: cualquiera puede
+copiarlo. Lo que de verdad protege es esto:
+- Cada cartel tiene impresa la dirección oficial debajo del texto.
+  Enseñá a los chicos a mirar, antes de tocar el enlace, que la dirección que
+  muestra el celular sea esa misma.
+- Al abrir la página tiene que aparecer el logo y el nombre de la ONG arriba.
+- Imprimí el QR como parte del cartel y plastificalo entero: un sticker pegado
+  encima se nota enseguida.
+- Revisá los carteles cada tanto. Si ves uno con un QR pegado encima, sacalo.
+- Nunca pidas datos personales ni pagos desde estas páginas. Si alguna vez un
+  QR pide eso, es falso.
